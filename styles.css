@@ -1,0 +1,162 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, sans-serif;
+}
+
+body {
+    display: flex;
+    height: 100vh;
+    overflow: hidden;
+    background-color: #f4f4f9;
+}
+
+/* Barra Lateral */
+#sidebar {
+    width: 340px;
+    background: white;
+    padding: 20px;
+    box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    z-index: 1000;
+    overflow-y: auto;
+}
+
+h2, h3 { 
+    color: #333; 
+    font-size: 1.2rem; 
+}
+
+.instructions {
+    font-size: 0.85rem;
+    color: #666;
+    background: #e9ecef;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+    width: 100%;
+}
+
+button {
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+}
+
+button:hover { 
+    background-color: #0056b3; 
+}
+
+#btn-location { 
+    background-color: #17a2b8; 
+}
+
+#btn-location:hover { 
+    background-color: #138496; 
+}
+
+#btn-finish { 
+    background-color: #28a745; 
+    display: none; 
+}
+
+#btn-finish:hover { 
+    background-color: #218838; 
+}
+
+#btn-cancel { 
+    background-color: #6c757d; 
+    display: none; 
+}
+
+#btn-cancel:hover { 
+    background-color: #5a6268; 
+}
+
+/* Lista de Rotas */
+.route-item {
+    background: #f8f9fa;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.route-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+}
+
+.route-name { 
+    font-weight: bold; 
+    color: #333; 
+    width: 100%; 
+}
+
+.route-actions {
+    display: flex;
+    gap: 5px;
+}
+
+.action-btn {
+    padding: 6px 10px;
+    font-size: 12px;
+    width: auto;
+}
+
+.btn-gmaps { 
+    background: #4285F4; 
+}
+
+.btn-gmaps:hover { 
+    background: #3367D6; 
+}
+
+.btn-delete { 
+    background: #dc3545; 
+}
+
+.btn-delete:hover { 
+    background: #c82333; 
+}
+
+hr { 
+    border: 0; 
+    border-top: 1px solid #ddd; 
+    margin: 5px 0; 
+}
+
+/* Mapa */
+#map {
+    flex-grow: 1;
+    height: 100%;
+    z-index: 1;
+}
+
+.drawing-cursor { 
+    cursor: crosshair !important; 
+}

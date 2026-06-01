@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerenciador de Rotas com GPS</title>
+    
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <div id="sidebar">
+        <h2>Painel de Controle</h2>
+        
+        <button id="btn-location" onclick="toggleLocation()">📍 Mostrar Minha Localização</button>
+        
+        <hr>
+        
+        <h3>Criar Nova Rota</h3>
+        <div class="instructions">
+            Clique em "Começar a Desenhar" e vá clicando no mapa para traçar o seu caminho.
+        </div>
+        
+        <input type="text" id="route-name" placeholder="Nome da rota">
+        
+        <button id="btn-start" onclick="startDrawing()">✏️ Começar a Desenhar</button>
+        <button id="btn-finish" onclick="finishAndSaveRoute()">✅ Salvar Rota</button>
+        <button id="btn-cancel" onclick="cancelDrawing()">❌ Cancelar</button>
+
+        <hr>
+
+        <h3>Minhas Rotas</h3>
+        <div id="saved-routes-list"></div>
+    </div>
+
+    <div id="map"></div>
+
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
